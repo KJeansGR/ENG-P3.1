@@ -1,5 +1,6 @@
 :root {
     --carbon-black: #191716;
+        --carbon-black-faded: #1917168b;
     --rich-mahogany: #440D0F;
     --mauve-shadow: #603A40;
     --smoky-rose: #84596B;
@@ -52,13 +53,9 @@ ul {
 .p-section {
     background-color: var(--mauve-shadow);
     border-left: 0.35rem solid var(--rich-mahogany);
-
     padding: 1.25rem;
     margin: 0.5rem;
-
-
-    box-shadow:
-        -0.125rem 0.125rem 0.4rem var(--box-shadow);
+    box-shadow:-0.125rem 0.125rem 0.4rem var(--box-shadow);
 }
 
 .p-section h1,
@@ -83,11 +80,9 @@ ul {
     font-weight: 700;
 }
 
-.p-section p,
-.p-section li {
+.p-section p, .p-section li {
     color: var(--text-muted);
     font-size: clamp(0.95rem, 2vw, 1.125rem);
-    margin: 0.5rem 0;
 }
 
 .p-section a {
@@ -108,19 +103,28 @@ ul {
     border: 1px solid var(--smoky-rose);
     padding: 2rem;
 }
-
+.section-div-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-between;
+}
+.diagram-image {
+    padding: 1rem;
+    max-width: 450px;
+    height: auto;
+}
 #info-0 p {
     text-align: center;
     color: var(--text-muted);
     max-width: 700px;
     margin: 0 auto;
 }
-
 .highlight-section {
     background-color: var(--smoky-rose);
 }
 
-.p-section img {
+.icon {
     width: 2rem;
     height: 2rem;
     object-fit: contain;
@@ -128,6 +132,13 @@ ul {
     margin-right: 0.5rem;
 }
 
+.pros-cons {
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    padding: 2rem;
+    background: var(--carbon-black-faded    );
+}
 .guide {
     max-width: 900px;
     margin: 2rem auto;
@@ -157,7 +168,51 @@ ul {
     color: var(--text-muted);
 }
 
+.vpn-steps {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+}
+
+.vpn-step {
+    flex: 1;
+    padding: 1rem;
+    text-align: center;
+    background-color: var(--smoky-rose);
+    border: 1px solid var(--lilac-ash);
+}
+
+.step-number {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    margin: 0 auto 0.5rem;
+
+    border-radius: 50%;
+    background-color: var(--rich-mahogany);
+
+    line-height: 2rem;
+    font-weight: bold;
+}
+
+.vpn-step strong {
+    display: block;
+}
+
+.step-arrow {
+    font-size: 1.75rem;
+}
+
+
 @media (max-width: 700px) {
+        .vpn-steps {
+        flex-direction: column;
+    }
+
+    .step-arrow {
+        transform: rotate(90deg);
+    }
     .grid-cont {
         grid-template-columns: 1fr;
     }
